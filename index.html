@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <button class="switch-button" id="next-button">
+    <button class="switch-button" id="switch">
     SWITCH
     </button>
 
@@ -37,6 +37,13 @@
           src="assets/Fox.glb"
         ></a-asset-item>
 
+        <a-asset-item
+          id="BRIL"
+          src="assets/pink_round_sunglasses.glb"
+        ></a-asset-item>
+
+        <!-- hier eerst a asset toevoegen met link naar map assets en dan pas a-gltf-model toevoegen hieronder met src="#id"-->
+
       </a-assets>
 
       <a-camera active="false" position="0 0 0"></a-camera>
@@ -55,9 +62,22 @@
         <a-gltf-model
           rotation="0 0 0"
           position="0 0 0"
+          scale="1 1 1"
+          src="#BRIL"
+        ></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-face-target="anchorIndex: 10">
+        <a-gltf-model
+          rotation="0 0 0"
+          position="0 0 0"
           scale="0.01 0.01 0.01"
           src="#FOX"
         ></a-gltf-model>
+        </a-entity>
+
+        <!-- a entity met anchor index moet a gltf bevatten DUS niet alleen gltf kopiëren, maar ook a-entity met mind face target open en endtag -->
+
       </a-entity>
     </a-scene>
   </body>
